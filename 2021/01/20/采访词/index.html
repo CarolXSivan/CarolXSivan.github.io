@@ -1,250 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>采访词 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="太太你好，我是本次颜间有物市集的访谈记者许馨文~ 因为在我的印象里，绘圈中画的很好的人都可以叫做太太或者老师，请问这样称呼你可以嘛? 因为采访之后，我会整理本次所得的资料，拟出一篇新闻稿，所以会对会议进行录音以便之后回放，谢谢理解！  借这次艺术市集的机会，我们也是有幸接触了你们这么多艺术家。本次采访的契机是来自新冠疫情这个大背景，我们主要想了解艺术家过往经历、创作习惯、疫情下如何生存等问题，我也">
-<meta property="og:type" content="article">
-<meta property="og:title" content="采访词">
-<meta property="og:url" content="http://example.com/2021/01/20/%E9%87%87%E8%AE%BF%E8%AF%8D/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="太太你好，我是本次颜间有物市集的访谈记者许馨文~ 因为在我的印象里，绘圈中画的很好的人都可以叫做太太或者老师，请问这样称呼你可以嘛? 因为采访之后，我会整理本次所得的资料，拟出一篇新闻稿，所以会对会议进行录音以便之后回放，谢谢理解！  借这次艺术市集的机会，我们也是有幸接触了你们这么多艺术家。本次采访的契机是来自新冠疫情这个大背景，我们主要想了解艺术家过往经历、创作习惯、疫情下如何生存等问题，我也">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-20T14:01:26.000Z">
-<meta property="article:modified_time" content="2021-01-20T14:02:23.214Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="2020 EV market">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-采访词" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/20/%E9%87%87%E8%AE%BF%E8%AF%8D/" class="article-date">
-  <time datetime="2021-01-20T14:01:26.000Z" itemprop="datePublished">2021-01-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      采访词
-    </h1>
-  
+{% block page_class %}page-post-detail{% endblock %}
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>太太你好，我是本次颜间有物市集的访谈记者许馨文~ 因为在我的印象里，绘圈中画的很好的人都可以叫做太太或者老师，请问这样称呼你可以嘛?</p>
-<p>因为采访之后，我会整理本次所得的资料，拟出一篇新闻稿，所以会对会议进行录音以便之后回放，谢谢理解！</p>
-<p> 借这次艺术市集的机会，我们也是有幸接触了你们这么多艺术家。本次采访的契机是来自新冠疫情这个大背景，我们主要想了解艺术家过往经历、创作习惯、疫情下如何生存等问题，我也针对我自己的采访拟定了一些问题，很想与你聊一聊。</p>
-<p>1.首先，我看到你的昵称是“冰山”，就挺戳我的，能不能介绍一下这个名字的由来，以及做一个关于你个人简短的自我介绍呢？（姓名、年龄、来自哪里、现居地、如何走上艺术家这条职业生涯、人生转折点）</p>
-<p>2.请问你有成立自己的工作室吗？有：成立缘由、寓意/无：之后有无计划、寓意</p>
-<p>3.简单介绍一下作品的风格，有没有一个特别能代表你自己的作品？（之后就某个作品深入聊）</p>
-<p>4.我发现，艺术家们会经常用日常的素材摸摸鱼，同时也会大批量的创作和印刷自己的一些作品。那么你认为个人插画作品与商业插画的区别是什么？</p>
-<p>5.我从你的朋友圈动态了解到，你的一些作品的素材都来源于电影或者书籍。当你从电影和书籍中收集素材时，有没有感触很深的电影情节或者书中的片段？能不能简单描述一下？</p>
-<p>6.新冠疫情让大家被迫足不出户，在此期间，你的艺术创作受到了哪些影响？你的生活状态或习惯有被疫情改变吗？疫情有给你什么创作灵感吗？</p>
-<p>7.你平常会通过哪些方式来寻找灵感或提高审美？因为疫情的缘故，行动受限，如果你只能待在家里进行艺术创作，你会通过什么方式来提升自己的审美？</p>
-<p>\8. 如果你被隔离十四天，只能使用三样东西来创作，你会选择什么？为什么？</p>
-<p>9.我了解到，你现在是正在就读研究生对吗？你未来的职业规划是什么？由于疫情，你会对原先的规划做出调整吗？在这种形式下，你觉得未来艺术家的就业方向会是怎样的？</p>
-<p>10.在许多人的印象中，艺术家大多是“神秘的”，请问你同意这个描述吗？为什么？如果要用3个词描述“艺术家”，你会用哪3个词？为什么？</p>
-<p>11.采访的最后，我想问一个有意思的问题: 如果2020能够重来一遍，你希望改变什么？</p>
-<p>好啦，以上就是本次采访我想要了解的所有问题。非常感谢你能抽出时间来接受我的采访。通过这次机会，我也是对艺术家有了更深刻的认识。总之，非常感谢！</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/20/%E9%87%87%E8%AE%BF%E8%AF%8D/" data-id="ckk5hx1u1000004ck3q3e5l9a" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2020-EV-market/" rel="tag">2020 EV market</a></li></ul>
+{% block content %}
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2021/01/20/Cakes-full-of-love/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Cakes full of love
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/01/20/EV-market-journalist-1st-draft/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">EV market journalist- 1st draft</div>
-    </a>
-  
-</nav>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2020-EV-market/" rel="tag">2020 EV market</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2020-2021FBLA/" rel="tag">2020-2021FBLA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FBLA-Emerging-Leaders-Award-essay/" rel="tag">FBLA Emerging Leaders Award essay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IG-Biology-self-study/" rel="tag">IG Biology self-study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JLHS-life/" rel="tag">JLHS life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%87%E5%AD%A6%E8%93%84%E6%B0%B4/" rel="tag">升学蓄水</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/2020-EV-market/" style="font-size: 20px;">2020 EV market</a> <a href="/tags/2020-2021FBLA/" style="font-size: 15px;">2020-2021FBLA</a> <a href="/tags/FBLA-Emerging-Leaders-Award-essay/" style="font-size: 15px;">FBLA Emerging Leaders Award essay</a> <a href="/tags/IG-Biology-self-study/" style="font-size: 10px;">IG Biology self-study</a> <a href="/tags/JLHS-life/" style="font-size: 20px;">JLHS life</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E5%8D%87%E5%AD%A6%E8%93%84%E6%B0%B4/" style="font-size: 15px;">升学蓄水</a>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2021/06/12/My-strengths-in-analyzing-and-conducting-data/">My strengths in analyzing and conducting data</a>
-          </li>
-        
-          <li>
-            <a href="/2021/06/12/Establishing-my-own-social-circle/">Establishing my own social circle</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/19/First-time-to-be-a-future-business-leader/">First time to be a future business leader</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/18/4-18-personal-statement-%E6%AE%B5%E8%90%BD%E8%AF%95%E6%B0%B4/">4.18 personal statement 段落试水</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/18/%E6%96%B0%E9%97%BB%E9%87%87%E8%AE%BF%E7%BB%88%E7%A8%BF/">新闻采访终稿</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2021 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
