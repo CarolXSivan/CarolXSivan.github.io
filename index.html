@@ -1,23 +1,1800 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
 
-{% block content %}
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="什么时候才会更新呢">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CarolX&#39;s BLOG">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="CarolX&#39;s BLOG">
+<meta property="og:description" content="什么时候才会更新呢">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Glacier">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/"/>
+
+
+
+
+
+  <title>CarolX's BLOG</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CarolX's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Hola</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/12/My-strengths-in-analyzing-and-conducting-data/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/12/My-strengths-in-analyzing-and-conducting-data/" itemprop="url">My strengths in analyzing and conducting data</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-12T23:59:13+08:00">
+                2021-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Knowing yourself well</p>
+<p>required</p>
+<p>Good leaders know themselves well. They have the ability to analyze their own strengths and weaknesses, set personal and vocational goals, and have the self-esteem, confidence, motivation, and abilities to carry them out.</p>
+<p>​                                          My strengths in analyzing and conducting data</p>
+<p> In regard of the most unique character of myself, it reminds me of my ability of analyzing and conducting data. Recently I have done an online career analysis called Morrisby, which illustrated that I owned a high percentage of numerical ability as well as an analyzing interest.</p>
+<p> Apart from using scientific testing to prove my ability, I develop such kind of character through various ways. Last term, our Economics teacher organized a project named ‘Student Company’, requiring us to set up our own company and sell original products on the School Food Festival. I worked as Analytical Manager of my team’s company due to my efficiency in integrating and analyzing figures. My first task was to design a questionnaire to investigate what kind of creative products students would like to purchase. I asked 3 specific questions and gave out both paper and online questionnaires. Afterwards, I built pie charts and bar charts so that information could be summarized. According to my analysis, bookmarks together with badges were the products that most students looked forward to. In addition, the data lead me to the conclusion that adopting retailing was the most suitable method. My assumption turned out to be accurate in the end, which brought our company appreciable profits.</p>
+<p> Moreover, I made a financial statement for our market sales. I read relative books such as Principles of Economics and studied the 2020 financial statement of Apple Company in order that I understood the basic format and professional terms of a financial statement. Besides, I divided the available data into groups to calculate separately, so that no false calculations were made. </p>
+<p> To sum up, because I am a care person and are sensitive to figures, my numerical ability is relatively high. To help myself strengthen this character, I have learnt how to collect and build models to analyze data effectively.                   </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/12/Establishing-my-own-social-circle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/12/Establishing-my-own-social-circle/" itemprop="url">Establishing my own social circle</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-12T23:56:20+08:00">
+                2021-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Relationship Building</p>
+<p>required</p>
+<p>Leaders understand the value of building long-lasting relationships with people in their industry and make a point to pursue partnerships whenever they can. Building a network of valuable people is critical for your long-term success.</p>
+<p>​                                                      Establishing my own social circle</p>
+<p> Early in junior high, I have defined my dream as setting up my own pop culture company, which requires me to acquire knowledge in Business and Entrepreneurship, s well as build relationships with people who do well in designing and computer programming, as I might not apply for courses in these fields in college.</p>
+<p> Building a relationship should never be a deliberate action. From my point of view, after I get to know a person’s strengths and find them can fill in my shortcomings, I will share my opinions with him or her honestly, then ask whether he or she is interested in supporting my future goal. In addition, exchanging ideas is the key to establishing a long-lasting relationship. For instance, one of my friends hopes to start her own entertainment company in the future, while I am eager to enter the pop culture industry as mentioned before. It is clear that we both want to become entrepreneurs, so that exchanging our resources is very valuable. During school breaks as well as weekends, we would like to brainstorm about our future industries, which helps us developing our plans more specifically and considering about cross-field cooperation.</p>
+<p> Moreover, I highly value relationships with adults. Due to their age difference, they usually own more abundant resources and wider networks, making it essential to ask for advice from them. Take myself as an example, I make friends with a tour guide who works in European countries. Keeping in touch with her can provide me with timely information of the fashion trends in Western nations. I have summarize some useful methods of socializing with your elders. First of all, always be modest and listen to their experiences carefully. Secondly, ask them questions frequently to extend this relationship. Apart from those, I find that chatting with adults about our common interests or hobbies can quickly diminish the age barrier between ourselves.</p>
+<p> From my perspective, building a relationship should not be deliberate. However, it is vital to keep in touch regularly and exchange our creative ideas in order that valuable friends or helpers will not be missed.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/19/First-time-to-be-a-future-business-leader/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/19/First-time-to-be-a-future-business-leader/" itemprop="url">First time to be a future business leader</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-19T00:46:08+08:00">
+                2021-04-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>First time to be a future business leader</p>
+<p>2020 FBLA business competition was the first competition that I have participated in since I entered school, which was an authoritative business competition.</p>
+<p>Luckily, the first round didn’t require us to qualify a lot of business knowledge, and the official guide booklet was certainly enough for passing this round’s contest. What really mattered to me was how to arrange my self-study plan of the guide under the high pressure of my schoolwork. It is necessary to highlight the outline and key points of each session, for example, in the business ownership session, there were 4 kinds, where memorizing their functions were the most important, not the relevant examples given or lengthy definitions. In other words, the key to passing the first round was how to distribute your time to study the whole guide as well as define the real necessary knowledge.</p>
+<p>Being shortlisted in the top 15% of my entry subject, Entrepreneurship, I soon found out that the national round was more academic, as the official guide became much thicker, and a case study was required to be presented by a group of 3. In addition, the preparation process truly taught me a lot of things, either academic or technical. I have learnt some basic method for analyzing a business case, for instance, SWOT and PEST, which practiced my ability to understand the properties of a business suggested behind sentences (Having some existing supporters or raw material providers mean that a partnership can be set. Selling marmalades implies that the PED graph of the product may be elastic.) Besides, conducting a case study in front of the judges using livestreaming meant that I needed to use proper facial expressions and gestures in order to make my presentation look natural, and quick response to the questions of the judges was vital. On the other hand, presenting a case study is certainly similar to a real-time experience of consulting with an investor or a shareholder. I should express my sincere using language and give professional advice together with strong evidence to them. Furthermore, as I have mentioned before, case study also examines the cooperation among teammates. It is more closed to a negotiation with colleagues, where communication skill and a sense of execution are extremely crucial, as we need to become familiar with each other and finish the preparation in a very limited time.</p>
+<p>Last but not least, due to the COVID-19 outbreak, the original schedule of taking part in the national competition in Shanghai was cancelled. Instead, we sat in our homes, doing case studies and completing multiple choices questions in front of a camera. Under this circumstance, honesty was also tested. Official guides were by our side; however, it was not ethical to malpractice secretly. After all, honesty is needed when being engaged in business activities in the real world.</p>
+<p>My result of 2020 FBLA business competition was not bad, and four national certificates were received by myself ( Personal Finance national 15th place, Business Calculations national 5th place, Entrepreneurship national 25th place, Value Creators in Zone A). Looking forward to the offline competition next year.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/4-18-personal-statement-%E6%AE%B5%E8%90%BD%E8%AF%95%E6%B0%B4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/18/4-18-personal-statement-%E6%AE%B5%E8%90%BD%E8%AF%95%E6%B0%B4/" itemprop="url">4.18 personal statement 段落试水</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-18T21:59:21+08:00">
+                2021-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Briefly describe a personal goal you have set for yourself, and how long you have been working to achieve this goal. Who did you turn to for advice or help, and what was their role? what did you learn about yourself? (maximum 350 words)</p>
+<p> Because Business Management or Economics will be my first choice for my university course application, the relevant grades in my Economics course are very important. I have set myself a goal for the final IGCSE exam of Economics, which is to achieve an A*. Although I had not been exposed to Economics before high school, I soon find that it is closely related to my ideal profession and I am strongly interested in it.</p>
+<p> I put my effort in Economics as much as possible since I entered Grade 10. There are plenty of basic principles and academic terms that I am unfamiliar with, reducing my efficiency of understanding the textbook. As a result, I turned to some books for help, which illustrated the key terms in both micro and macro economics very precisely and offered me a quick access to fill my knowledge gap.</p>
+<p> In addition, I have asked my economics teacher as well as my classmates who are good at Economics for help. They act as my mistake correctors and instructors. As some specific formats and exam strategies are tested in Economics exams, it is essential for me to ask my teacher to help me correct the nonstandard formats I have written. Therefore, my accuracy in tests has been significantly improved. Besides, learning from peers is certainly a good method. My classmates recommended some of their tips for studying Economics to me, which I found very useful and have added to my skill set.</p>
+<p> During the process of pursuing an A* of Economics, I learnt that the two words-“precise” and “modest” are the keys to achieve my personal goal. A keen sense of judgement to economic cases is highly required, and that is what I should learn from others continuously.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/%E6%96%B0%E9%97%BB%E9%87%87%E8%AE%BF%E7%BB%88%E7%A8%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/18/%E6%96%B0%E9%97%BB%E9%87%87%E8%AE%BF%E7%BB%88%E7%A8%BF/" itemprop="url">新闻采访终稿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-18T21:35:07+08:00">
+                2021-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Standing at crossroads in life, graduation project help artist choose a path</strong> </p>
+<p>“I experienced challenges from late 2019 to 2020,” said Bingshan, a 22-year-old female artist who was at final year of her four-year undergraduate program in Graphic Design at Nanjing University of Arts during that time. When graduation meets COVID-19 pandemic, “what I’m going to do” was a question popping into her mind when she underwent her graduation project and thought of her future. “The challenges truly helped me grow up in many ways and answer my question.”</p>
+<p>As Bingshan started her final year in September 2019, doing a graduation project to achieve the degree and thinking about her future career became her major tasks. </p>
+<p>“Graduation means I’m going to be kicked from peaceful campus to the society and severely beaten by it,” she wrote on her official Wechat.</p>
+<p>The student was confused about career and future. Like some of her fellow students did, she took postgraduate entry exams and doubted if it was a right choice. </p>
+<p>Meanwhile, she doubted if she should stick to her style of design while doing the project. </p>
+<p>“Most of my fellow students follow a trend of using abstract and geometric design methods, such as modeling,” Bingshan said, “but I’m good at drawing illustrations.”</p>
+<p>The student worried that illustrations aren’t trendy. “But my mentor suggested me to stick to my personal design style when I finally find it. At that time, I can use my own way to design graphics,” she said. </p>
+<p>Since COVID-19 broke out in January last year, Bingshan’s university shut down and she was placed on lockdown for several months. The pandemic inspired the artist on the project topic. An idea called “Maslow’s hierarchy of needs” grabbed her attention, which illustrates the ascending five needs of human beings: physiological needs, safety needs, belongingness and love needs, esteem needs and self-actualization needs.</p>
+<p>Bingshan realized the five basic needs were important to people during the pandemic. Based on them, she created five illustrations featuring the main character huddled in a small cubic room, which looks like a person who is placed on lockdown.</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/cIbY5t"><img src="https://z3.ax1x.com/2021/04/18/cIbY5t.jpg" alt="cIbY5t.jpg"></a></p>
+<p>“挤压空间Squeezing the space,” 2020. Courtesy of Bingshan</p>
+<p>The theory also inspired her to think of her lifelong pursuits. She asked herself some questions for the very first time: “What kind of person I want to be? What kind of job I want to do?”</p>
+<p>Although the answers are not clear, the artist has made decisions about near future — she decided to continue drawing illustrations.</p>
+<p>Her graduation project was submitted and shortlisted in the 2020 Young Battle graduation season art competition. Meanwhile, She passed postgraduate entry exams and started her master’s degree in graphic design at Nanjing University of Arts in September 2020. In next three years, she is going to try her things and figure out more life questions. Meanwhile, she has joined Riso, a printing studio in November last year to publish some of her artworks, and is going to work there as a partnership after achieving her master’s degree.</p>
+<p>“My expectation is to feed one skill (drawing illustrations) with another skill (making graphic designs),” said Bingshan. “That’s what my experience during COVID-19 pandemic has told me.” </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/18/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/04/18/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-04-18T17:25:00+08:00">
+                2021-04-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>大家好，这是我的第一个博客，多谢关注！</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/06/FBLA-mock-case-study-part2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/02/06/FBLA-mock-case-study-part2/" itemprop="url">FBLA mock case study part2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-06T17:31:39+08:00">
+                2021-02-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="C:\Users\xubin\Desktop\2021-02-06_172616.jpg"></p>
+<p><img src="C:\Users\xubin\Desktop\2021-02-06_172631.jpg"></p>
+<h1 id="Case-study-part-2（bulletpoint-1-3"><a href="#Case-study-part-2（bulletpoint-1-3" class="headerlink" title="Case study part 2（bulletpoint 1,3)"></a>Case study part 2（bulletpoint 1,3)</h1><p>Next we move on to decide what kind of business ownership should Lacey have.</p>
+<p>We advise Lacey and her business partners set the ownership of partnership or LLC .</p>
+<p>A partnership is a business owned by two or more people . Many entrepreneurs prefer to go into business with one or more partners so that they can share decision-making and management responsibilities as well as the risks involved with entrepreneurship.</p>
+<p>For the advantages of a partnership, first ,it means you will not to come up with all of the capital alone.For example, Lacey can ask her partner who does farming to provide machines to manufacture oranges . Moreover , any losses the business incurs will be shared by all of the partners , and they can offer Lancey expertise and knowledge in different fields .</p>
+<p>However , some partners may not want to share responsibilities and profits with others ,so the partnership may result in disagreements and end bitterly .</p>
+<p>On the other hand , Lacey can also choose to set up a limited liability company (Short for LLC ).</p>
+<p>A limited liability company is a legal form of business that provides the benefits of a partnership taxation and limited liability features of a corporation for all of the business . Owners of LLCs are known as members .</p>
+<p>Here are some advantages of LLCs . First of all , it limits liability for managers and members, which means every member ‘s responsibility is clearly defined ,so they wouldn’t fear being held legally liable for the errors of their partners . Another advantage is an LLC has flow-through taxation. Profits are distributed to the members , who are taxed on profits at their personal tax level, which avoids double taxation .</p>
+<p>Nevertheless , an LLC has some disadvantages . For instance, some states ,including California ,charge extra fees for opening an LLC .</p>
+<p>If Lacey wants to run a short-term business , we prefer to let her choose the partnership , because a partnership faces little government regulation and is relatively easy to be organised . However ,if she wants a long-term business ,it’s better to set an LLC, as there are clear liability limitations and good privacy protection ,which can ensure the life expectancy of Lancey’s business .</p>
+<p>For the following part , I will introduce the industry characteristic, major competitors ,market segment as well as the price strategy of Lacey’s Marmalades and Jellies.</p>
+<p>Lacey’s Marmalades and Jellies has a relatively elastic price elasticity of demand and supply.</p>
+<p><img src="C:\Users\xubin\AppData\Roaming\Typora\typora-user-images\image-20210206173738475.png" alt="image-20210206173738475"></p>
+<p>Because marmalades and jellies are a kind of necessity and have lots of substitutes ,a rise in the price of them would be likely to cause a greater percentage contraction in demand .</p>
+<p><img src="C:\Users\xubin\AppData\Roaming\Typora\typora-user-images\image-20210206173804341.png" alt="image-20210206173804341"></p>
+<p>Because marmalades and jellies can be produced quickly and can be stored for a relatively long time ,they have an elastic PES ,which means a change in price causes a greater change in the quantity supplied .</p>
+<p>The major competitors of Lacey’s business are producers who also produce marmalades and Jellies ,because they have entered the market for longer time with better reputation ,and their products are close substitutes of Lacey’s products .</p>
+<p>Lacey’s marmalades and Jellies should belong to mass market . It aims to address the highest number of potential customers while ignoring niche demographic differences .The strategy involved in this type of marketing strategy focuses on a higher volume of sales at lower prices so as to obtain maximum exposure for the product. Through this market strategy , Lacey can sell her products at a moderate price to the general public .</p>
+<p>For the price strategy , Lacey can take penetration pricing , which is a pricing strategy of setting a relatively low price often supported by strong promotion in order to achieve a high volume of sales . Lacey should use this kind of strategy ,because she is attempting to use mass marketing and gain a large market share . The price could be slowly increased as she knows the market better .</p>
+<p>Here is a strategic analysis of Lacey’s business . We use a SWOT analysis .</p>
+<p><img src="C:\Users\xubin\AppData\Roaming\Typora\typora-user-images\image-20210206173831244.png" alt="image-20210206173831244"></p>
+<p>That’s all for my part , thank you .</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/04/1-1-1-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/02/04/1-1-1-2/" itemprop="url">1.1-1.2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-02-04T19:34:02+08:00">
+                2021-02-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>   I read Lesson 1.1 and 1.2 of the first chapter, <em>Classification</em> today.</p>
+<p>   I have learned  that living organisms have 7 features or characteristics which make them different from objects that are not alive. These characteristics are <strong>growth, movement, sensitivity, excretion, reproduction, nutrition and respiration</strong>. </p>
+<p>   Here are the definitions of these words.</p>
+<img src="C:\Users\xubin\Desktop\微信图片_20210204203421.jpg"  />
+
+<p>   In addition to these 7 definitions, living organisms have another feature in common- they are all made of <strong>cells</strong>, which all have <strong>cytoplasm, a cell membrane, DNA, ribosomes and enzymes</strong>.</p>
+<p>   Besides,  I have known how to classify living things.</p>
+<p>   The first method is to <strong>use DNA to help with classification</strong>. Biologists can compare the sequences of bases(which are called A,C,G and T) in the DNA of organisms from two different species. The more similar the base sequences, the more closely related the species are to one another.</p>
+<p>  The second method is to <strong>use the classification system</strong>, introduced by <em>Swedish naturalist Linnaeus</em> in 1735. He divided all the different kinds of living things into groups called species. The organisms belong to the same species if they can breed together successfully, and their offspring can also breed. </p>
+<p>  The complete order is like this: <strong>Species &lt; Genus &lt; Family &lt; Order &lt; Class &lt; Phylum &lt; Kingdom</strong>.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/20/Should-Art-courses-be-included-in-the-scope-of-Zhongkao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/01/20/Should-Art-courses-be-included-in-the-scope-of-Zhongkao/" itemprop="url">Should Art courses be included in the scope of Zhongkao?</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-20T22:12:13+08:00">
+                2021-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Should Art courses be included in the scope of Zhongkao?</strong></p>
+<p>As it is known to all, Music and Art have always been two compulsory courses for middle school students in China. However, the attitudes of different cities towards the question of whether Art courses should be included in the scope of Zhongkao are not the same. Is it wise to put Music and Art into the scope that must be examined?</p>
+<p>In some cities, for example, Guilin and Yiyang, Art courses end before Zhongkao and they needn’t be examined. This regulation has a clear advantage that students aren’t distracted by the preparation of Art exam so that they can focus more on other subjects. </p>
+<p>However, every coin has two sides. Music and Art don’t need to be examined, which means they aren’t as important as other subjects in some ways. Because of this, some students don’t concentrate on their Art courses and even ignore them. Therefore, they will be lack of the knowledge of arts.</p>
+<p>Nevertheless, many cities such as Shanghai and Shijiazhuang, consider Music and Art as subjects of examination. Students there must prepare for Music and Art exams, which means they are asked to recite all kinds of related knowledge points. During the process, students can improve their memories and aesthetic levels step by step.</p>
+<p>It is, however, arguable that whether adopting this kind of method can really make students learn more deeply about Music and Art. Some critics state that this method can only force students to recite dull knowledge, and turn the learning process into a kind of formalism. What’s more, a lot of parents are worried that preparing for Art exams take up too much valuable time of the ninth grade. Music and Art are seemed as burdens to some students.</p>
+<p>I am a graduate from a junior high in Nanjing where Music and Art must be examined. When it comes to me, putting Music and Art into the scope of Zhongkao isn’t a wise action. For us who were preparing for Zhongkao, the exams of Music and Art were like two tricky tasks. We focused on reciting the sentences required to be remembered, but ignored the real charm of these subjects. In other words, we didn’t have time to do further learning or seek the interesting side of Music and Art. The original intension of the Ministry of Education has not been realized at all.</p>
+<p>In summary, it is not sensible to put Music and Art into the scope of Zhongkao. Forcing students to feel the charm of Music and Art is counterproductive. After all, we need to be willing to develop our aesthetic abilities on our own instead of being stuck in a school syllabus.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/20/Cakes-full-of-love/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CarolX's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/01/20/Cakes-full-of-love/" itemprop="url">Cakes full of love</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-01-20T22:09:09+08:00">
+                2021-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Cakes Full of Love</strong></p>
+<p>‘Eat up these cakes and you’ll definitely get high marks!’ Mum said excitedly, wiping her hands with the apron.</p>
+<p>Mum isn’t a woman who is good at expressing love to her daughter. A few weeks before Zhongkao, many mothers were planning to wear Qipao on the exam day. Mum didn’t think about this, because she knew that her body type wasn’t suitable for a Qipao. ‘Many mothers will support their kids in many ways, so what will you do for me?’ I once asked her. An embarrassed look appeared on her face. ‘ I’ll try.’</p>
+<p>Magical things have happened since the following week. Mum bought some recipes home and insisted on learning to make one kind of cake every day. Mum leaves home at 7:30 a.m. and arrives at home from work at about 6:30 p.m. every day, but it seemed that she didn’t care much about her daily routine during that time. I often found her read the recipe carefully when I finished my homework at 11 p.m. every day.</p>
+<p>I was very surprised at how serious Mum was when making the cakes. She used her finger to point at the words on the recipe in order that she wouldn’t miss any key process. What’s more, she made sure that she bought the best ingredients every time so that the quality of the cake could be proved.</p>
+<p>Finally, it was the day before the exam day. Mum was making a kind of mysterious cake that she didn’t let anyone see her works, while I was busy reviewing my textbooks. In the whole house there was no noise or impatience. The atmosphere in the house was so harmonious that I felt completely relaxed.</p>
+<p>The exam day was coming. As soon as I walked out from my bedroom, a kind of special aroma led me to the kitchen door. After a while, Mum walked to the dining room with a plate on her hand. The sweet smell was from here! I couldn’t wait to see what the mysterious thing was. It turned out to be some white cakes.‘They are called Dingsheng Gao,’ Mum said, ‘it means you will be successful after eating these cakes.’</p>
+<p>What meaningful cakes! After biting the cake, I found the lovely filling in it-the osmanthus sauce. The fresh taste of the cake gave me a strong feeling: I am going to win with my mother’s love.</p>
+<p>Making cakes was Mum’s own way to support me. The unique cakes truly gave me much confidence during the exams. At last, I really got high marks with Mum’s deep love.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Glacier</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
